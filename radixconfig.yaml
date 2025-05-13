@@ -1,0 +1,30 @@
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: opensource
+spec:
+  environments:
+    - name: dev
+      build:
+        from: master
+    - name: prod
+  components:
+    - name: web
+      resources:
+        requests:
+          memory: "24Mi"
+          cpu: "20m"
+        limits:
+          cpu: "50m"
+      publicPort: http
+      ports:
+        - name: http
+          port: 8080
+  dnsAppAlias:
+    environment: prod
+    component: web
+  dnsExternalAlias:
+    - alias: opensource.equinor.com
+      environment: prod
+      component: web
+      useCertificateAutomation: true

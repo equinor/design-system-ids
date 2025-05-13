@@ -1,0 +1,21 @@
+{
+  "name": "opensource.equinor.com",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "stylelint \"www/**.html\"",
+    "dev": "browser-sync start --server \"www\" --files \"www/index.html\"",
+    "docker:build": "docker build -t equinor/oss-web .",
+    "docker:start": "docker run -p 8080:8080 equinor/oss-web",
+    "docker:inspect": "docker run -it equinor/oss-web /bin/sh"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "prettier": "^2.1.1",
+    "stylelint": "^16.13.2",
+    "stylelint-config-clean-order": "^7.0.0",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-idiomatic-order": "^10.0.0",
+    "stylelint-config-standard": "^37.0.0",
+    "stylelint-order": "^6.0.4"
+  }
+}

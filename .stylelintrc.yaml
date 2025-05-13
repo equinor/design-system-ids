@@ -1,0 +1,11 @@
+extends:
+  - "stylelint-config-standard"
+  - "stylelint-config-html"
+  - "stylelint-config-clean-order"
+rules:
+  custom-property-pattern: 
+    - "^([a-z][a-zA-Z0-9]*)(-[a-zA-Z0-9]+)*$"
+    - message: "Expected '%s' to be kebab-case or camelCase (custom-property-pattern)"
+  property-no-vendor-prefix: 
+    - true
+    - ignoreProperties: ["/^(column[s-]?)([a-z]*)$/"]
