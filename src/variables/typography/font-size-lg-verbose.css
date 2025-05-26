@@ -1,0 +1,13 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+[data-font-size="lg"] {
+  --font-size: var(--typography-lg-font-size);
+  --font-weight-regular: var(--typography-lg-font-weight-regular);
+  --font-weight-bold: var(--typography-lg-font-weight-bold);
+  --line-height-normal: var(--typography-lg-line-height-normal);
+  --line-height-squished: var(--typography-lg-line-height-squished);
+  --icon-size: var(--figma-lg-icon-size);
+  --icon-text-gap: var(--figma-lg-icon-text-gap);
+}

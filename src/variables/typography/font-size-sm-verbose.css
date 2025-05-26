@@ -1,0 +1,13 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+[data-font-size="sm"] {
+  --font-size: var(--typography-sm-font-size);
+  --font-weight-regular: var(--typography-sm-font-weight-regular);
+  --font-weight-bold: var(--typography-sm-font-weight-bold);
+  --line-height-normal: var(--typography-sm-line-height-normal);
+  --line-height-squished: var(--typography-sm-line-height-squished);
+  --icon-size: var(--figma-sm-icon-size);
+  --icon-text-gap: var(--figma-sm-icon-text-gap);
+}

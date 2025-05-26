@@ -3,3 +3,6 @@ node_modules
 _site
 _tmp
 dist
+build-generate
+build
+.env

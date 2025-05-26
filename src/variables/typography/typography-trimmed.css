@@ -1,0 +1,26 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --typography-xs-font-size: 0.656rem;
+  --typography-xs-font-weight-regular: 400;
+  --typography-xs-font-weight-bold: 700;
+  --typography-xs-line-height-normal: 16;
+  --typography-xs-line-height-squished: 12;
+  --typography-sm-font-size: 0.75rem;
+  --typography-sm-font-weight-regular: 400;
+  --typography-sm-font-weight-bold: 700;
+  --typography-sm-line-height-normal: 16;
+  --typography-sm-line-height-squished: 12;
+  --typography-md-font-size: 0.875rem;
+  --typography-md-font-weight-regular: 400;
+  --typography-md-font-weight-bold: 700;
+  --typography-md-line-height-normal: 20;
+  --typography-md-line-height-squished: 16;
+  --typography-lg-font-size: 1rem;
+  --typography-lg-font-weight-regular: 400;
+  --typography-lg-font-weight-bold: 700;
+  --typography-lg-line-height-normal: 24;
+  --typography-lg-line-height-squished: 20;
+}

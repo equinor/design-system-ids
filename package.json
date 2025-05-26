@@ -1,22 +1,41 @@
 {
   "name": "opensource.equinor.com",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "lint": "stylelint \"www/**.html\"",
     "dev": "browser-sync start --server \"www\" --files \"www/index.html\"",
     "docker:build": "docker build -t equinor/oss-web .",
     "docker:start": "docker run -p 8080:8080 equinor/oss-web",
     "docker:inspect": "docker run -it equinor/oss-web /bin/sh",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "update-tokens:colors:brand": "sync-figma-to-tokens --file-key 9Jody75rpiDhyTgNm3xOHd",
+    "update-tokens:colors": "sync-figma-to-tokens --file-key QRFchmc6GHsKSBEdqdFLMr",
+    "update-tokens:spacing": "sync-figma-to-tokens --file-key V3XAAjEw7dl2vQmDvG4RNW",
+    "update-tokens:typography": "sync-figma-to-tokens --file-key FS9KIlmO8N8rv3rAO65UUi",
+    "update-tokens": "pnpm run update-tokens:colors:brand && pnpm run update-tokens:colors && pnpm run update-tokens:spacing && pnpm run update-tokens:typography",
+    "_pre-generate:clean": "rimraf ./build && rimraf ./src/variables",
+    "_pre-generate:build": "vite build --config vite.generate.config.ts",
+    "_pre-generate:copy": "copyfiles ./src/generate/css/*.css ./src/variables --flat && copyfiles ./build/css/*.css ./src/variables --flat",
+    "_pre-generate:copy-build": "copyfiles -u 2 \"./build/css/**/*\" ./src/variables",
+    "generate": "pnpm run _pre-generate:clean && pnpm run _pre-generate:build && node build-generate/generate.js && pnpm run _pre-generate:copy && pnpm run _pre-generate:copy-build && lightningcss --bundle ./src/variables/_index.css -o ./src/variables/index.css"
   },
   "devDependencies": {
+    "@equinor/eds-tokens-build": "^1.0.0",
+    "@equinor/eds-tokens-sync": "^1.0.0",
     "browser-sync": "^3.0.3",
+    "copyfiles": "^2.4.1",
+    "lightningcss-cli": "^1.30.1",
     "prettier": "^2.1.1",
+    "rimraf": "^6.0.1",
+    "style-dictionary": "^5.0.0",
+    "style-dictionary-utils": "^4.0.5",
     "stylelint": "^16.13.2",
     "stylelint-config-clean-order": "^7.0.0",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-idiomatic-order": "^10.0.0",
     "stylelint-config-standard": "^37.0.0",
-    "stylelint-order": "^6.0.4"
+    "stylelint-order": "^6.0.4",
+    "vite": "^6.3.5"
   }
 }
