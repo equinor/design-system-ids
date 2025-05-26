@@ -196,8 +196,6 @@
   --font-weight-bold: var(--typography-xs-font-weight-bold);
   --line-height-normal: var(--typography-xs-line-height-normal);
   --line-height-squished: var(--typography-xs-line-height-squished);
-  --icon-size: var(--figma-xs-icon-size);
-  --icon-text-gap: var(--figma-xs-icon-text-gap);
 }
 
 [data-font-size="sm"] {
@@ -206,8 +204,6 @@
   --font-weight-bold: var(--typography-sm-font-weight-bold);
   --line-height-normal: var(--typography-sm-line-height-normal);
   --line-height-squished: var(--typography-sm-line-height-squished);
-  --icon-size: var(--figma-sm-icon-size);
-  --icon-text-gap: var(--figma-sm-icon-text-gap);
 }
 
 [data-font-size="md"] {
@@ -216,8 +212,6 @@
   --font-weight-bold: var(--typography-md-font-weight-bold);
   --line-height-normal: var(--typography-md-line-height-normal);
   --line-height-squished: var(--typography-md-line-height-squished);
-  --icon-size: var(--figma-md-icon-size);
-  --icon-text-gap: var(--figma-md-icon-text-gap);
 }
 
 [data-font-size="lg"] {
@@ -226,8 +220,6 @@
   --font-weight-bold: var(--typography-lg-font-weight-bold);
   --line-height-normal: var(--typography-lg-line-height-normal);
   --line-height-squished: var(--typography-lg-line-height-squished);
-  --icon-size: var(--figma-lg-icon-size);
-  --icon-text-gap: var(--figma-lg-icon-text-gap);
 }
 
 :root, [data-font-weight="regular"] {
@@ -244,14 +236,4 @@
 
 [data-line-height="squished"] {
   --line-height: var(--line-height-squished);
-}
-
-:root, [data-baseline-aligned="true"] {
-  --padding-bottom: 0;
-  --padding-top: var(--padding-baselined);
-}
-
-[data-baseline-aligned="false"] {
-  --padding-top: var(--padding-centred);
-  --padding-bottom: var(--padding-centred);
 }

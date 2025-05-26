@@ -5,14 +5,7 @@ export const FILE_KEY = 'FS9KIlmO8N8rv3rAO65UUi'
 
 // create a filter function that filters out tokens that are not relevant for typography
 export const includeTypographyTokenFilter = (token: TransformedToken) => {
-  const namesToExclude = [
-    'padding-centred',
-    'padding-baselined',
-    'icon-size',
-    'icon-text-gap',
-    'con-container-padding-horisontal',
-    'con-container-padding-vertical',
-  ]
+  const namesToExclude = ['icon-size', 'icon-text-gap']
   const isExcluded = namesToExclude.some((nameToExclude) =>
     token.name.includes(nameToExclude),
   )
@@ -52,7 +45,9 @@ export async function generateTypographyVariables({
     buildPath: BUILD_PATH,
     fileName: 'font-size-xs',
     selector: ':root, [data-font-size="xs"]',
-    filter: (token) => includeTokenFilter(token, ['Font size']),
+    filter: (token) =>
+      includeTokenFilter(token, ['Font size']) &&
+      includeTypographyTokenFilter(token),
     transforms: cssTransforms,
     outputReferences: true,
   })
@@ -63,7 +58,9 @@ export async function generateTypographyVariables({
     buildPath: BUILD_PATH,
     fileName: 'font-size-sm',
     selector: '[data-font-size="sm"]',
-    filter: (token) => includeTokenFilter(token, ['Font size']),
+    filter: (token) =>
+      includeTokenFilter(token, ['Font size']) &&
+      includeTypographyTokenFilter(token),
     transforms: cssTransforms,
     outputReferences: true,
   })
@@ -74,7 +71,9 @@ export async function generateTypographyVariables({
     buildPath: BUILD_PATH,
     fileName: 'font-size-md',
     selector: '[data-font-size="md"]',
-    filter: (token) => includeTokenFilter(token, ['Font size']),
+    filter: (token) =>
+      includeTokenFilter(token, ['Font size']) &&
+      includeTypographyTokenFilter(token),
     transforms: cssTransforms,
     outputReferences: true,
   })
@@ -85,7 +84,9 @@ export async function generateTypographyVariables({
     buildPath: BUILD_PATH,
     fileName: 'font-size-lg',
     selector: '[data-font-size="lg"]',
-    filter: (token) => includeTokenFilter(token, ['Font size']),
+    filter: (token) =>
+      includeTokenFilter(token, ['Font size']) &&
+      includeTypographyTokenFilter(token),
     transforms: cssTransforms,
     outputReferences: true,
   })

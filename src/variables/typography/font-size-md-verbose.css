@@ -8,6 +8,4 @@
   --font-weight-bold: var(--typography-md-font-weight-bold);
   --line-height-normal: var(--typography-md-line-height-normal);
   --line-height-squished: var(--typography-md-line-height-squished);
-  --icon-size: var(--figma-md-icon-size);
-  --icon-text-gap: var(--figma-md-icon-text-gap);
 }
