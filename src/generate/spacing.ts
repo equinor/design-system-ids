@@ -13,7 +13,6 @@ export async function generateSpacingVariables({
   tokensDir: string
   cssTransforms: string[]
 }) {
-  const FIGMA_ONLY_PATH = `${tokensDir}/FS9KIlmO8N8rv3rAO65UUi/🚫 Figma only.Value.json`
   const SPACING_SOURCE = `${tokensDir}/${FILE_KEY}/01 Spacing.Mode 1.json`
   const PADDING_XS_SOURCE = `${tokensDir}/${FILE_KEY}/03 Padding.XS.json`
   const PADDING_SM_SOURCE = `${tokensDir}/${FILE_KEY}/03 Padding.SM.json`
@@ -35,7 +34,6 @@ export async function generateSpacingVariables({
   const xs = _extend({
     source: [PADDING_XS_SOURCE],
     include: [
-      FIGMA_ONLY_PATH,
       SPACING_SOURCE,
       SQUARED_SOURCE,
       SQUISHED_SOURCE,
@@ -52,7 +50,6 @@ export async function generateSpacingVariables({
   const sm = _extend({
     source: [PADDING_SM_SOURCE],
     include: [
-      FIGMA_ONLY_PATH,
       SPACING_SOURCE,
       SQUARED_SOURCE,
       SQUISHED_SOURCE,
@@ -69,7 +66,6 @@ export async function generateSpacingVariables({
   const md = _extend({
     source: [PADDING_MD_SOURCE],
     include: [
-      FIGMA_ONLY_PATH,
       SPACING_SOURCE,
       SQUARED_SOURCE,
       SQUISHED_SOURCE,
@@ -85,7 +81,7 @@ export async function generateSpacingVariables({
 
   const squished = _extend({
     source: [SQUISHED_SOURCE],
-    include: [SPACING_SOURCE, FIGMA_ONLY_PATH],
+    include: [SPACING_SOURCE],
     buildPath: BUILD_PATH,
     fileName: 'selectable-ratio-squished',
     selector: ':root, [data-ratio="squished"]',
@@ -96,7 +92,7 @@ export async function generateSpacingVariables({
 
   const stretched = _extend({
     source: [STRETCHED_SOURCE],
-    include: [SPACING_SOURCE, FIGMA_ONLY_PATH],
+    include: [SPACING_SOURCE],
     buildPath: BUILD_PATH,
     fileName: 'selectable-ratio-stretched',
     selector: '[data-ratio="stretched"]',
@@ -107,7 +103,7 @@ export async function generateSpacingVariables({
 
   const squared = _extend({
     source: [SQUARED_SOURCE],
-    include: [SPACING_SOURCE, FIGMA_ONLY_PATH],
+    include: [SPACING_SOURCE],
     buildPath: BUILD_PATH,
     fileName: 'selectable-ratio-squared',
     selector: '[data-ratio="squared"]',

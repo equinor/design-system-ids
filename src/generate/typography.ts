@@ -23,7 +23,6 @@ export async function generateTypographyVariables({
   cssTransforms: string[]
 }) {
   const BUILD_PATH = '/typography/'
-  const FIGMA_ONLY_PATH = `${tokensDir}/${FILE_KEY}/🚫 Figma only.Value.json`
   const TYPOGRAPHY_SOURCE = `${tokensDir}/${FILE_KEY}/01 Typography.Value.json`
   const FONT_SIZE_XS_SOURCE = `${tokensDir}/${FILE_KEY}/02 Font size.XS.json`
   const FONT_SIZE_SM_SOURCE = `${tokensDir}/${FILE_KEY}/02 Font size.SM.json`
@@ -41,7 +40,7 @@ export async function generateTypographyVariables({
 
   const xs = _extend({
     source: [FONT_SIZE_XS_SOURCE],
-    include: [TYPOGRAPHY_SOURCE, FIGMA_ONLY_PATH],
+    include: [TYPOGRAPHY_SOURCE],
     buildPath: BUILD_PATH,
     fileName: 'font-size-xs',
     selector: ':root, [data-font-size="xs"]',
@@ -54,7 +53,7 @@ export async function generateTypographyVariables({
 
   const sm = _extend({
     source: [FONT_SIZE_SM_SOURCE],
-    include: [TYPOGRAPHY_SOURCE, FIGMA_ONLY_PATH],
+    include: [TYPOGRAPHY_SOURCE],
     buildPath: BUILD_PATH,
     fileName: 'font-size-sm',
     selector: '[data-font-size="sm"]',
@@ -67,7 +66,7 @@ export async function generateTypographyVariables({
 
   const md = _extend({
     source: [FONT_SIZE_MD_SOURCE],
-    include: [TYPOGRAPHY_SOURCE, FIGMA_ONLY_PATH],
+    include: [TYPOGRAPHY_SOURCE],
     buildPath: BUILD_PATH,
     fileName: 'font-size-md',
     selector: '[data-font-size="md"]',
@@ -80,7 +79,7 @@ export async function generateTypographyVariables({
 
   const lg = _extend({
     source: [FONT_SIZE_LG_SOURCE],
-    include: [TYPOGRAPHY_SOURCE, FIGMA_ONLY_PATH],
+    include: [TYPOGRAPHY_SOURCE],
     buildPath: BUILD_PATH,
     fileName: 'font-size-lg',
     selector: '[data-font-size="lg"]',
@@ -96,7 +95,7 @@ export async function generateTypographyVariables({
 
   const regular = _extend({
     source: [FONT_WEIGHT_REGULAR_SOURCE],
-    include: [TYPOGRAPHY_SOURCE, FIGMA_ONLY_PATH, FONT_SIZE_XS_SOURCE],
+    include: [TYPOGRAPHY_SOURCE, FONT_SIZE_XS_SOURCE],
     buildPath: BUILD_PATH,
     fileName: 'font-weight-regular',
     selector: ':root, [data-font-weight="regular"]',
@@ -107,7 +106,7 @@ export async function generateTypographyVariables({
 
   const bold = _extend({
     source: [FONT_WEIGHT_BOLD_SOURCE],
-    include: [TYPOGRAPHY_SOURCE, FIGMA_ONLY_PATH, FONT_SIZE_XS_SOURCE],
+    include: [TYPOGRAPHY_SOURCE, FONT_SIZE_XS_SOURCE],
     buildPath: BUILD_PATH,
     fileName: 'font-weight-bold',
     selector: '[data-font-weight="bold"]',
@@ -130,7 +129,7 @@ export async function generateTypographyVariables({
 
   const lineHeightNormal = _extend({
     source: [LINE_HEIGHT_NORMAL_SOURCE],
-    include: [TYPOGRAPHY_SOURCE, FIGMA_ONLY_PATH, FONT_SIZE_XS_SOURCE],
+    include: [TYPOGRAPHY_SOURCE, FONT_SIZE_XS_SOURCE],
     buildPath: BUILD_PATH,
     fileName: 'line-height-normal',
     selector: ':root, [data-line-height="normal"]',
@@ -140,7 +139,7 @@ export async function generateTypographyVariables({
   })
   const lineHeightSquished = _extend({
     source: [LINE_HEIGHT_SQUISHED_SOURCE],
-    include: [TYPOGRAPHY_SOURCE, FIGMA_ONLY_PATH, FONT_SIZE_XS_SOURCE],
+    include: [TYPOGRAPHY_SOURCE, FONT_SIZE_XS_SOURCE],
     buildPath: BUILD_PATH,
     fileName: 'line-height-squished',
     selector: '[data-line-height="squished"]',
@@ -157,7 +156,7 @@ export async function generateTypographyVariables({
 
   const baselineAlignedTrue = _extend({
     source: [BASELINE_ALIGNED_TRUE_SOURCE],
-    include: [TYPOGRAPHY_SOURCE, FIGMA_ONLY_PATH, FONT_SIZE_XS_SOURCE],
+    include: [TYPOGRAPHY_SOURCE, FONT_SIZE_XS_SOURCE],
     buildPath: BUILD_PATH,
     fileName: 'baseline-aligned-true',
     selector: ':root, [data-baseline-aligned="true"]',
@@ -167,7 +166,7 @@ export async function generateTypographyVariables({
   })
   const baselineAlignedFalse = _extend({
     source: [BASELINE_ALIGNED_FALSE_SOURCE],
-    include: [TYPOGRAPHY_SOURCE, FIGMA_ONLY_PATH, FONT_SIZE_XS_SOURCE],
+    include: [TYPOGRAPHY_SOURCE, FONT_SIZE_XS_SOURCE],
     buildPath: BUILD_PATH,
     fileName: 'baseline-aligned-false',
     selector: '[data-baseline-aligned="false"]',
