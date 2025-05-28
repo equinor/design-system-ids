@@ -3,7 +3,7 @@
     "Inline": {
       "XS": {
         "$type": "number",
-        "$value": "{Spacing.2}",
+        "$value": "{Spacing.Pos.2}",
         "$description": "",
         "$extensions": {
           "com.figma": {
@@ -15,7 +15,7 @@
       },
       "SM": {
         "$type": "number",
-        "$value": "{Spacing.3}",
+        "$value": "{Spacing.Pos.3}",
         "$description": "",
         "$extensions": {
           "com.figma": {
@@ -27,7 +27,7 @@
       },
       "MD": {
         "$type": "number",
-        "$value": "{Spacing.4}",
+        "$value": "{Spacing.Pos.4}",
         "$description": "",
         "$extensions": {
           "com.figma": {
@@ -41,7 +41,7 @@
     "Stack": {
       "XS": {
         "$type": "number",
-        "$value": "{Spacing.2}",
+        "$value": "{Spacing.Pos.2}",
         "$description": "",
         "$extensions": {
           "com.figma": {
@@ -53,7 +53,7 @@
       },
       "SM": {
         "$type": "number",
-        "$value": "{Spacing.3}",
+        "$value": "{Spacing.Pos.3}",
         "$description": "",
         "$extensions": {
           "com.figma": {
@@ -65,7 +65,7 @@
       },
       "MD": {
         "$type": "number",
-        "$value": "{Spacing.4}",
+        "$value": "{Spacing.Pos.4}",
         "$description": "",
         "$extensions": {
           "com.figma": {

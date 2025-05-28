@@ -61,7 +61,7 @@
   },
   "padding-centred": {
     "$type": "number",
-    "$value": "{figma.lg.padding-centred}",
+    "$value": "{typography.lg.padding-centred}",
     "$description": "",
     "$extensions": {
       "com.figma": {
@@ -73,7 +73,7 @@
   },
   "padding-baselined": {
     "$type": "number",
-    "$value": "{figma.lg.padding-baselined}",
+    "$value": "{typography.lg.padding-baselined}",
     "$description": "",
     "$extensions": {
       "com.figma": {
@@ -85,7 +85,35 @@
   },
   "icon-size": {
     "$type": "number",
-    "$value": "{figma.lg.icon-size}",
+    "$value": "{typography.lg.icon-size}",
+    "$description": "",
+    "$extensions": {
+      "com.figma": {
+        "hiddenFromPublishing": false,
+        "scopes": [
+          "ALL_SCOPES"
+        ],
+        "codeSyntax": {}
+      }
+    }
+  },
+  "icon-container-margin-inline": {
+    "$type": "number",
+    "$value": "{typography.lg.icon-container-margin-inline}",
+    "$description": "",
+    "$extensions": {
+      "com.figma": {
+        "hiddenFromPublishing": false,
+        "scopes": [
+          "ALL_SCOPES"
+        ],
+        "codeSyntax": {}
+      }
+    }
+  },
+  "icon-container-margin-stack": {
+    "$type": "number",
+    "$value": "{typography.lg.icon-container-margin-stack}",
     "$description": "",
     "$extensions": {
       "com.figma": {
@@ -99,35 +127,7 @@
   },
   "icon-text-gap": {
     "$type": "number",
-    "$value": "{figma.lg.icon-text-gap}",
-    "$description": "",
-    "$extensions": {
-      "com.figma": {
-        "hiddenFromPublishing": false,
-        "scopes": [
-          "ALL_SCOPES"
-        ],
-        "codeSyntax": {}
-      }
-    }
-  },
-  "icon-container-padding-horisontal": {
-    "$type": "number",
-    "$value": "{figma.lg.icon-padding-inline}",
-    "$description": "",
-    "$extensions": {
-      "com.figma": {
-        "hiddenFromPublishing": false,
-        "scopes": [
-          "ALL_SCOPES"
-        ],
-        "codeSyntax": {}
-      }
-    }
-  },
-  "icon-container-padding-vertical": {
-    "$type": "number",
-    "$value": "{figma.lg.icon-padding-stack}",
+    "$value": "{typography.lg.icon-text-gap}",
     "$description": "",
     "$extensions": {
       "com.figma": {

@@ -3,10 +3,10 @@
  */
 
 [data-ratio="stretched"] {
-  --spacing-inline-xs: var(--spacing-2);
-  --spacing-inline-sm: var(--spacing-3);
-  --spacing-inline-md: var(--spacing-4);
-  --spacing-stack-xs: var(--spacing-3);
-  --spacing-stack-sm: var(--spacing-4);
-  --spacing-stack-md: var(--spacing-5);
+  --spacing-inline-xs: var(--spacing-pos-2);
+  --spacing-inline-sm: var(--spacing-pos-3);
+  --spacing-inline-md: var(--spacing-pos-4);
+  --spacing-stack-xs: var(--spacing-pos-3);
+  --spacing-stack-sm: var(--spacing-pos-4);
+  --spacing-stack-md: var(--spacing-pos-5);
 }

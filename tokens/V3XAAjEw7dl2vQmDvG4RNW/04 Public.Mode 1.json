@@ -48,7 +48,7 @@
     },
     "Icon container padding horisontal": {
       "$type": "number",
-      "$value": "{icon-container-padding-horisontal}",
+      "$value": "{icon-container-margin-inline}",
       "$description": "",
       "$extensions": {
         "com.figma": {
@@ -62,7 +62,7 @@
     },
     "Icon container padding vertical": {
       "$type": "number",
-      "$value": "{icon-container-padding-vertical}",
+      "$value": "{icon-container-margin-stack}",
       "$description": "",
       "$extensions": {
         "com.figma": {
@@ -89,24 +89,10 @@
       }
     }
   },
-  "Icon padding": {
-    "$type": "number",
-    "$value": -12,
-    "$description": "",
-    "$extensions": {
-      "com.figma": {
-        "hiddenFromPublishing": false,
-        "scopes": [
-          "ALL_SCOPES"
-        ],
-        "codeSyntax": {}
-      }
-    }
-  },
   "Container": {
     "Padding inline": {
       "$type": "number",
-      "$value": "{Spacing.4}",
+      "$value": "{Spacing.Pos.4}",
       "$description": "",
       "$extensions": {
         "com.figma": {
@@ -120,7 +106,7 @@
     },
     "Padding stack": {
       "$type": "number",
-      "$value": "{Spacing.4}",
+      "$value": "{Spacing.Pos.4}",
       "$description": "",
       "$extensions": {
         "com.figma": {
@@ -134,7 +120,7 @@
     },
     "Gap": {
       "$type": "number",
-      "$value": "{Spacing.4}",
+      "$value": "{Spacing.Pos.4}",
       "$description": "",
       "$extensions": {
         "com.figma": {
