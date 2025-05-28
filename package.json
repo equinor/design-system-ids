@@ -14,11 +14,11 @@
     "update-tokens:spacing": "sync-figma-to-tokens --file-key V3XAAjEw7dl2vQmDvG4RNW",
     "update-tokens:typography": "sync-figma-to-tokens --file-key FS9KIlmO8N8rv3rAO65UUi",
     "update-tokens": "pnpm run update-tokens:colors:brand && pnpm run update-tokens:colors && pnpm run update-tokens:spacing && pnpm run update-tokens:typography",
-    "_pre-generate:clean": "rimraf ./build && rimraf ./src/variables",
+    "_pre-generate:clean": "rimraf ./build && rimraf ./www/variables",
     "_pre-generate:build": "vite build --config vite.generate.config.ts",
-    "_pre-generate:copy-css-index": "copyfiles ./src/generate/css/*.css ./src/variables --flat",
-    "_pre-generate:copy-build-output": "copyfiles -u 2 \"./build/css/**/*\" ./src/variables",
-    "_css:generate": "lightningcss --bundle ./src/variables/_index.css -o ./src/variables/index.css",
+    "_pre-generate:copy-css-index": "copyfiles ./src/generate/css/*.css ./www/variables --flat",
+    "_pre-generate:copy-build-output": "copyfiles -u 2 \"./build/css/**/*\" ./www/variables",
+    "_css:generate": "lightningcss --bundle ./www/variables/_index.css -o ./www/variables/index.css",
     "generate": "pnpm run _pre-generate:clean && pnpm run _pre-generate:build && node build-generate/generate.js && pnpm run _pre-generate:copy-css-index && pnpm run _pre-generate:copy-build-output && pnpm run _css:generate"
   },
   "devDependencies": {
